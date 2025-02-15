@@ -27,6 +27,17 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 33
 
+    // START - CHANGE JAVA VERSION -- QUANGTRAN
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    // END - CHANGE JAVA VERSION -- QUANGTRAN
+    
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
